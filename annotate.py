@@ -54,7 +54,7 @@ for key, gt in ground_truth.items():
         else:
             chunked_tr_images = chunkify(tr_images, chunk_size=fps)
             for ch_dx, chunk in enumerate(chunked_tr_images):
-                print(chunk)
+                # print(chunk)
                 images = [read_image_for_annotation(img_path) for img_path in chunk]
                 chunked_images = chunkify(images, 5)
                 chunked_images = [chhh for chhh in chunked_images if len(chhh) == 5]
